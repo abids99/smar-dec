@@ -1,0 +1,389 @@
+.App {
+  text-align: center;
+  position: relative;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  margin: 0 15px;
+  padding: 10px;
+  border: 1px rgba(255,255,255,0.5) solid;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: white;
+}
+.nav a.active {
+  background-color: #61DAFB;
+  color: #222;
+}
+
+.content  {
+  background-color: #1d1d1d;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 8px;
+  z-index: 1
+}
+
+.content-cus  {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 0px;
+  z-index: 1
+}
+
+.content > div {
+  width: 20%;
+  padding-right: 8px
+}
+
+.content > div:first-child {
+  min-width: 220px
+}
+
+.content > div:nth-child(2) {
+  min-width: 200px
+}
+
+.content  div:nth-child(3) {
+  width: 40%
+}
+
+.content > div:last-child {
+  padding-right: 0;
+  min-width: 240px
+}
+
+@media (max-width:992px) {
+  .content {
+    display: block;
+    overflow-y: auto
+  }
+
+  .content > div {
+    width: 100%!important;
+    padding-right: 0;
+    padding-bottom: 8px
+  }
+}
+
+.vertical > div {
+  height: 100%
+}
+
+.vertical-split {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: nowrap
+}
+
+.vertical-split > div {
+  height: 50%
+}
+
+.vertical-split > div:first-child {
+  margin-bottom: 8px
+}
+
+.vertical-split:last-child > div:first-child {
+  height: 60%
+}
+
+.vertical-split:last-child > div:last-child {
+  height: 40%
+}
+
+@media (max-width:992px) {
+  .vertical-split {
+    display: block
+  }
+  .vertical-split > div,
+  .vertical-split > div:first-child {
+    height: auto
+  }
+}
+
+.center-cus-text {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.text-height {
+  top: 10%;
+}
+
+.center-button{
+  position: absolute;
+  top: 55%;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.full > div {
+  height: 100px;
+}
+
+.center-button-nav{
+  position: absolute;
+  top: 16%;
+  width: 10%;
+  right: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.c-button-nav{
+  position: absolute;
+  top: 5%;
+  width: 10%;
+  right: 12%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.r-button-nav{
+  position: absolute;
+  top: 5%;
+  width: 10%;
+  right: 20%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.l-button-nav{
+  position: absolute;
+  top: 5%;
+  width: 10%;
+  right: 5%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.img > div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.horizontal > div {
+  width: 100%
+}
+
+.horizontal-split {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  
+  justify-content: space-evenly;
+  flex-wrap: nowrap
+}
+
+.horizontal-split > div {
+  width: 50%
+}
+
+.horizontal-split > div {
+  height: 90%
+}
+
+.horizontal-split > div:first-child {
+  margin-bottom: 0px
+}
+
+.horizontal-split > div:first-child {
+  margin-left: 0px
+}
+
+.horizontal-split > div:first-child {
+  margin-right: 0px
+}
+
+.horizontal-split > div:last-child {
+  margin-right: 0px
+}
+
+.horizontal-split:last-child > div:first-child {
+  width: 50%
+}
+
+.horizontal-split:last-child > div:last-child {
+  width: 50%
+}
+
+@media (max-width:992px) {
+  .horizontal-split {
+    display: block
+  }
+  .horizontal-split > div,
+  .horizontal-split > div:first-child {
+    width: auto
+  }
+}
+
+.container{ 
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50%;/* Define the width here; */
+    height: 50%;/* Define the height here; */
+}
+
+.card {
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.card-header {
+  padding: 8px 4px;
+}
+
+.card-body{
+  flex: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  padding: 2px;
+}
+
+.card-body th {
+  border-top: 0;
+}
+
+.card-body .nav-tabs {
+  border-color: #95999c;
+}
+
+.card-body .nav-item.nav-link {
+  font-size: 80%;
+  font-weight: bold;
+  background-color: inherit;
+  color: inherit;
+  padding: 4px 8px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-color: #95999c;
+  border-radius: 0px;
+}
+
+.card-body .nav-item.nav-link.active {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid #007bff;
+}
+
+.card-body .price-chart {
+  height:100%;
+  padding-bottom: 60px;
+}
+
+.card-body .price-chart .price {
+  padding-left: 20px;
+}
+
+td.cancel-order {
+  cursor: pointer;
+}
+
+tr.order-book-order {
+  cursor: pointer;
+}
+
+.p-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+    bottom: 0;
+  width: 100%;
+  background: #23036e;  
+  height: 56px;
+}
+
+.p-nav-p {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.p-nav-l a {
+  color: #00fcd2;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.p-nav-s {
+  flex: 0.5;
+}
+
+.p-nav-b ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.p-nav-b li {
+  padding: 0 0.5rem;
+}
+
+.p-nav-b a {
+  color: #2aeb9e;
+  text-decoration: none;
+
+}
+
+.p-nav-b a:hover {
+  color: #eb2a2a;
+}
+
+.p-nav-b a:active {
+  color: #eb2a2a;
+}
+
+.p-nav-b .current {
+  color: #ff0000;
+}
+
+.spacer {
+  flex: 0.01;
+}
